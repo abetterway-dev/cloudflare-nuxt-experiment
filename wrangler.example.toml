@@ -1,0 +1,13 @@
+name = "<PROJECT_NAME>"
+main = ".output/server/index.mjs"
+compatibility_date = "2024-04-03"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "<DB_NAME>"
+database_id = "<DB_ID>"
+
+rules = [{ type = "ESModule", globs = ["**/*.js", "**/*.mjs"] }]
+
+[site]
+bucket = ".output/public"
