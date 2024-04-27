@@ -19,6 +19,7 @@ logs
 .idea
 
 # Cloudflare
+.wrangler
 wrangler.toml
 
 # Local env files

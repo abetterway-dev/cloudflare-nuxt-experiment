@@ -9,5 +9,7 @@ database_id = "<DB_ID>"
 
 rules = [{ type = "ESModule", globs = ["**/*.js", "**/*.mjs"] }]
 
+kv_namespaces = [{ binding = "<BINDING_NAME>", id = "<BINDING_ID>" }]
+
 [site]
 bucket = ".output/public"

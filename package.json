@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare",
     "deploy": "nuxt build && npx wrangler deploy",
     "preview:deploy": "npx wrangler dev",
-    "d1:deploy": "npx wrangler d1 execute testing-db --local --file=data/init.sql && npx wrangler d1 execute testing-db --remote --file=data/init.sql"
+    "d1:overide": "npx wrangler d1 execute testing-db --local --file=data/init.sql && npx wrangler d1 execute testing-db --remote --file=data/init.sql"
   },
   "dependencies": {
+    "kysely": "^0.27.3",
+    "kysely-d1": "^0.3.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

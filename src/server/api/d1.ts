@@ -4,8 +4,12 @@ export default defineEventHandler(async (event) => {
   const { DB } = event.context.cloudflare.env;
 
   const result = await DB.prepare("SELECT * FROM hello_world").all();
-  return {
-    hello: "world",
-    result,
-  };
+  if (!!result) {
+    return { result };
+  } else {
+    throw createError({
+      statusCode: 503,
+      statusMessage: "Service Unavailable",
+    });
+  }
 });
